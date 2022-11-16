@@ -1,0 +1,123 @@
+/* Container1 Start*/
+
+.bg {
+    background: url(./../image/Group.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.height-100 {
+    height: calc(76vh);
+}
+
+.container-fluid {
+    margin-top: 19vh;
+    width: 92%;
+    margin-left: 0px;
+}
+
+.container-fluid .justify-content-start {
+    padding: 25px;
+}
+
+.container-fluid h3 {
+    font-size: 20px;
+    font-family: 'FFShamelFamily-SansOneBold';
+    color: #CF2A45;
+}
+
+.container-fluid p {
+    font-size: 16px;
+    color: #392C23;
+
+}
+
+.container-fluid h5 {
+    font-size: 16px;
+    color: #392C23;
+    font-family: 'FFShamelFamily-SansOneBold';
+}
+
+.container-fluid .div p,
+.container-fluid .div span {
+    font-size: 14px;
+    font-family: 'FFShamelFamily-SansOneBook';
+}
+
+.container-fluid h5 {
+    font-size: 14;
+    font-family: 'FFShamelFamily-SansOneBold';
+    color: #392C23;
+}
+
+.circle {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-block;
+    border: 1px solid #392C23;
+    margin: 0 4px;
+}
+
+.circle:hover {
+    background-color: #CF2A45;
+}
+
+.circle:hover svg path {
+    fill: #FFFFFF;
+}
+
+.circle:hover svg #Path_6917 {
+    fill: #CF2A45;
+}
+
+iframe {
+    width: 65%;
+    height: 25vh;
+}
+
+.form-control {
+    padding: 12px 15px;
+    border-radius: 13px;
+}
+
+.form-select {
+    padding: 12px 15px;
+    border-radius: 13px;
+    background-position: left 0.75rem center;
+}
+
+.form-control[type=file]:not(:disabled):not([readonly]) {
+    height: 140px;
+}
+
+textarea.form-control {
+    min-height: 140px;
+}
+
+form {
+    position: relative;
+}
+
+div .send {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    left: 0;
+}
+
+input[type=submit] {
+    width: 46px;
+    background-color: #3EC4B5;
+}
+
+.fa-solid,
+.fas {
+    right: 17px;
+    position: absolute;
+    bottom: 16px;
+    color: white;
+}

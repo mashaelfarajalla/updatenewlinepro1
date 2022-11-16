@@ -1,0 +1,86 @@
+/**/
+
+/*container start*/
+.bg {
+    background: url(./../image/Group.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.height-100 {
+    height: calc(76vh);
+}
+
+div.container-fluid {
+    margin-top: 19vh;
+    width: 92%;
+    margin-left: 0px;
+}
+
+div.container-fluid h3 {
+    font-size: 20px;
+    font-family: 'FFShamelFamily-SansOneBold';
+    color: #CF2A45;
+}
+
+div.container-fluid p,
+.hover p {
+    font-size: 16px;
+    color: #392C23;
+}
+
+.col-6 {
+    padding: 45px 57px 0 95px;
+}
+
+.col-6 .p {
+    padding-left: 90px;
+}
+
+.circle {
+    height: 56px;
+    width: 56px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.circle svg path {
+    fill: #392C23;
+}
+
+.hover h5 {
+    font-size: 16px;
+    font-family: 'FFShamelFamily-SansOneBold';
+}
+
+.hover:hover {
+    color: #CF2A45;
+}
+
+.hover:hover svg path {
+    fill: #FFFFFF;
+}
+
+.hover:hover .circle {
+    background-color: #CF2A45;
+}
+
+
+.divinline {
+    display: inline-grid;
+    position: absolute;
+    right: 17%;
+}
+
+.img2 img {
+    height: 68vh
+}
+
+.img img {
+    width: 30%;
+}
+
+/*container end*/

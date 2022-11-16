@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/nav.css">
+
+    <link rel="stylesheet" href="assets/css/index3.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+            const showNavbar = (toggleId, navId, bodyId, headerId) => {
+                const toggle = document.getElementById(toggleId),
+                    nav = document.getElementById(navId),
+                    bodypd = document.getElementById(bodyId),
+                    headerpd = document.getElementById(headerId)
+
+                // Validate that all variables exist
+                if (toggle && nav && bodypd && headerpd) {
+                    toggle.addEventListener('click', () => {
+                        // show navbar
+                        nav.classList.toggle('show')
+                        // change icon
+                        toggle.classList.toggle('bx-x')
+                        // add padding to body
+                        bodypd.classList.toggle('body-pd')
+                        // add padding to header
+                        headerpd.classList.toggle('body-pd')
+                    })
+                }
+            }
+
+            showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+            /*===== LINK ACTIVE =====*/
+            const linkColor = document.querySelectorAll('.nav_link')
+
+            function colorLink() {
+                if (linkColor) {
+                    linkColor.forEach(l => l.classList.remove('active'))
+                    this.classList.add('active')
+                }
+            }
+            linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+            // Your code to run since DOM is loaded and ready
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="body-pd">
+
+        <!--Header  start-->
+        <header class="Container header" id="header">
+            <div class="header_toggle">
+                <div class="div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.947" height="20" viewBox="0 0 18.947 20">
+                        <g id="icons8_user" transform="translate(-3 -2)">
+                            <circle id="Ellipse_110" data-name="Ellipse 110" cx="5.5" cy="5.5" r="5.5"
+                                transform="translate(7 2)" fill="#392c23" />
+                            <path id="Path_971" data-name="Path 971"
+                                d="M18.789,15H6.158a3.158,3.158,0,1,0,0,6.316H18.789a3.158,3.158,0,1,0,0-6.316Z"
+                                transform="translate(0 0.684)" fill="#392c23" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <path id="Subtraction_9" data-name="Subtraction 9"
+                            d="M2856,20a1.988,1.988,0,0,1-1.415-.586l-2.795-2.795a9,9,0,1,1,2.828-2.828l1.933,1.932.6.6.258.258A2,2,0,0,1,2856,20Zm-9-17a6,6,0,1,0,6,6A6.007,6.007,0,0,0,2847,3Z"
+                            transform="translate(-2838)" fill="#392c23" />
+                    </svg>
+                </div>
+                <div class="div">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g id="icons8_geography" transform="translate(-2 -1)">
+                            <path id="Path_973" data-name="Path 973"
+                                d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm6.918,6h-2.3a12.822,12.822,0,0,0-1.052-3.154A8.06,8.06,0,0,1,18.918,8ZM20,12a7.952,7.952,0,0,1-.263,2h-2.83c.06-.643.093-1.311.093-2s-.033-1.357-.093-2h2.83A7.952,7.952,0,0,1,20,12Zm-8,8c-.843,0-1.949-1.481-2.555-4h5.11C13.949,18.519,12.843,20,12,20ZM9.108,14a18.572,18.572,0,0,1,0-4h5.784A18.8,18.8,0,0,1,15,12a18.8,18.8,0,0,1-.108,2ZM4,12a7.952,7.952,0,0,1,.263-2h2.83C7.033,10.643,7,11.311,7,12s.033,1.357.093,2H4.263A7.952,7.952,0,0,1,4,12Zm8-8c.843,0,1.949,1.481,2.555,4H9.445C10.051,5.481,11.157,4,12,4Zm-3.56.846A12.822,12.822,0,0,0,7.388,8H5.082A8.056,8.056,0,0,1,8.44,4.846ZM5.082,16h2.3a12.822,12.822,0,0,0,1.052,3.154A8.059,8.059,0,0,1,5.082,16ZM15.56,19.154A12.864,12.864,0,0,0,16.612,16h2.3A8.048,8.048,0,0,1,15.56,19.154Z"
+                                transform="translate(0 -1)" fill="#392c23" />
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="div">
+                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        العربية
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">العربية</a></li>
+                        <li><a class="dropdown-item" href="#">الانجليزية</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="relative">
+                <img class="img1" src="assets/image/Path 959.png">
+                <img class="img2" src="assets/image/unnamed.png">
+            </div>
+
+            <div class="header_div">
+                <div class="d-inline-block">
+                    <p>الإثنين 1 محرم 1443 - 09 أغسطس 2021 | 11:46 صباحا</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g id="icons8_clock" transform="translate(-2 -2)">
+                            <path id="Path_966" data-name="Path 966"
+                                d="M14.892,13.586,13.88,12.117a1.437,1.437,0,0,1-.287-.681L13.12,8.05A1.05,1.05,0,0,0,12.07,7h0a1.05,1.05,0,0,0-1.05,1.05L10.6,11.734a1.792,1.792,0,0,0,.623,1.57l2.181,1.767a1.049,1.049,0,0,0,1.485,0h0A1.052,1.052,0,0,0,14.892,13.586Z"
+                                transform="translate(-0.121 -0.166)" fill="#392c23" />
+                            <path id="Path_967" data-name="Path 967"
+                                d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,17a7,7,0,1,1,7-7A7,7,0,0,1,12,19Z"
+                                transform="translate(0 0)" fill="#392c23" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="d-inline-block me-3">
+                    <p>+42°C</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                        <path id="icons8_sun"
+                            d="M17.983,3.978A1.05,1.05,0,0,0,16.95,5.043v2.1a1.05,1.05,0,0,0,2.1,0v-2.1a1.05,1.05,0,0,0-1.066-1.064Zm-9.152,3.8a1.049,1.049,0,0,0-.731,1.8l1.485,1.484a1.051,1.051,0,1,0,1.486-1.485L9.586,8.091A1.05,1.05,0,0,0,8.832,7.774Zm18.3,0a1.05,1.05,0,0,0-.722.317L24.929,9.575a1.051,1.051,0,1,0,1.486,1.485L27.9,9.577a1.049,1.049,0,0,0-.764-1.8ZM18,10.29a7.7,7.7,0,1,0,7.7,7.7A7.714,7.714,0,0,0,18,10.29Zm0,2.1a5.6,5.6,0,1,1-5.6,5.6A5.583,5.583,0,0,1,18,12.389ZM5.05,16.936a1.049,1.049,0,1,0,0,2.1h2.1a1.049,1.049,0,1,0,0-2.1Zm23.8,0a1.049,1.049,0,1,0,0,2.1h2.1a1.049,1.049,0,1,0,0-2.1ZM10.307,24.594a1.05,1.05,0,0,0-.722.317L8.1,26.395A1.051,1.051,0,0,0,9.586,27.88L11.071,26.4a1.049,1.049,0,0,0-.764-1.8Zm15.353,0a1.049,1.049,0,0,0-.731,1.8l1.485,1.484A1.051,1.051,0,1,0,27.9,26.395l-1.485-1.484a1.05,1.05,0,0,0-.755-.317Zm-7.677,3.172A1.05,1.05,0,0,0,16.95,28.83v2.1a1.05,1.05,0,0,0,2.1,0v-2.1a1.05,1.05,0,0,0-1.066-1.064Z"
+                            transform="translate(-4 -3.978)" fill="#392c23" />
+                    </svg>
+
+                </div>
+            </div>
+        </header>
+        <!--Header  end-->
+
+        <!--NavBar  start-->
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <div class="nav_list">
+                        <a href="index.html" class="nav_link">
+                            <span class="nav_name">
+                                <svg id="icons8_home_1" xmlns="http://www.w3.org/2000/svg" width="24.926" height="21.53"
+                                    viewBox="0 0 24.926 21.53">
+                                    <path id="icons8_home_1-2" data-name="icons8_home_1"
+                                        d="M13.123,1.32.66,12.888l1.154,1.247,1.121-1.041V22.85h8.49V14.36h3.4v8.49h8.49V13.094l1.121,1.041,1.154-1.247Zm0,2.308,8.49,7.893v9.631H16.519v-8.49H9.727v8.49H4.633V11.522Z"
+                                        transform="translate(-0.66 -1.32)" fill="#cf2a45" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="index2.html" class="nav_link ">
+                            <span class="nav_name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15.282" height="22.074"
+                                    viewBox="0 0 15.282 22.074">
+                                    <path id="icons8_android"
+                                        d="M5.547,1A2.556,2.556,0,0,0,3,3.547v16.98a2.556,2.556,0,0,0,2.547,2.547H15.735a2.556,2.556,0,0,0,2.547-2.547V3.547A2.556,2.556,0,0,0,15.735,1Zm0,1.7H15.735a.838.838,0,0,1,.849.849v16.98a.838.838,0,0,1-.849.849H5.547a.838.838,0,0,1-.849-.849V3.547A.838.838,0,0,1,5.547,2.7ZM9.792,17.98v1.7h1.7v-1.7Z"
+                                        transform="translate(-3 -1)" fill="#392c23" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="index3.html" class="nav_link active">
+                            <span class="nav_name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22.074" height="20.376"
+                                    viewBox="0 0 22.074 20.376">
+                                    <path id="icons8_telephone"
+                                        d="M12.037,2c-.929,0-1.764.033-2.547.08V2.066c-.06,0-.113.013-.172.013a25.44,25.44,0,0,0-5.724.9A3.811,3.811,0,0,0,1.822,4.189,3.206,3.206,0,0,0,1,6.245V8.792H6.107l.073-.769A7.961,7.961,0,0,1,6.8,5.781,4.037,4.037,0,0,1,7.832,4.355a2.352,2.352,0,0,1,1.141-.544c.113-.007.192-.02.312-.033.007,0,.013.007.02,0,.816-.046,1.725-.08,2.733-.08s1.917.033,2.733.08c.007.007.013,0,.02,0,.027.007.053.007.086.013.08,0,.146.013.226.02a2.352,2.352,0,0,1,1.141.544,4.035,4.035,0,0,1,1.035,1.426,7.959,7.959,0,0,1,.617,2.242l.066.769h5.114V6.245a3.206,3.206,0,0,0-.823-2.056A3.811,3.811,0,0,0,20.48,2.982a25.441,25.441,0,0,0-5.724-.9c-.06,0-.113-.013-.172-.013V2.08C13.8,2.033,12.965,2,12.037,2ZM5.742,4.222a6.983,6.983,0,0,0-.484.856A5.848,5.848,0,0,0,4.7,7.094h-2V6.245a1.618,1.618,0,0,1,.424-.962,2.214,2.214,0,0,1,.968-.67A16.291,16.291,0,0,1,5.742,4.222Zm12.589,0a16.925,16.925,0,0,1,1.658.391,2.235,2.235,0,0,1,.962.67,1.618,1.618,0,0,1,.424.962v.849h-2a5.952,5.952,0,0,0-.55-2.016A8.044,8.044,0,0,0,18.331,4.222ZM7.792,8.792v1.8l-.08.053a18.457,18.457,0,0,0-2.454,2.242c-1.234,1.34-2.56,3.151-2.56,5.24v1.7a2.556,2.556,0,0,0,2.547,2.547H18.829a2.556,2.556,0,0,0,2.547-2.547v-1.7c0-2.089-1.326-3.9-2.554-5.24a18.736,18.736,0,0,0-2.461-2.242l-.08-.053v-1.8h-1.7v1.7H9.49v-1.7Zm.743,3.4h7a14.675,14.675,0,0,1,2.023,1.844c1.108,1.207,2.116,2.792,2.116,4.1v1.7a.838.838,0,0,1-.849.849H5.245a.838.838,0,0,1-.849-.849v-1.7c0-1.307,1.008-2.892,2.109-4.1A14.959,14.959,0,0,1,8.535,12.188Zm-.743,1.7v1.7h1.7v-1.7Zm3.4,0v1.7h1.7v-1.7Zm3.4,0v1.7h1.7v-1.7Zm-6.792,3.4v1.7h1.7v-1.7Zm3.4,0v1.7h1.7v-1.7Zm3.4,0v1.7h1.7v-1.7Z"
+                                        transform="translate(-1 -2)" fill="#392c23" />
+                                </svg>
+
+                            </span>
+                        </a>
+                        <a href="index4.html" class="nav_link">
+                            <span class="nav_name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22.074" height="22.074"
+                                    viewBox="0 0 22.074 22.074">
+                                    <path id="icons8_help_2"
+                                        d="M12.037,1A11.037,11.037,0,1,1,1,12.037,11.054,11.054,0,0,1,12.037,1Zm0,1.7a9.339,9.339,0,1,0,9.339,9.339A9.327,9.327,0,0,0,12.037,2.7Zm-.1,3.4a3.979,3.979,0,0,1,3.734,3.94h-1.7a2.226,2.226,0,0,0-2.653-2.209A2.3,2.3,0,0,0,9.49,10.1,2.068,2.068,0,0,0,10.876,12a4.052,4.052,0,0,1,1.386.862,2.5,2.5,0,0,1,.623,1.725h-1.7c0-.385-.053-.444-.159-.557a3.135,3.135,0,0,0-.836-.478,3.859,3.859,0,0,1-2.4-3.4,3.961,3.961,0,0,1,3.243-4.006A4.639,4.639,0,0,1,11.937,6.094Zm.948,10.188v1.7h-1.7v-1.7Z"
+                                        transform="translate(-1 -1)" fill="#392c23" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column">
+                    <p class="text mb-2">جميع الحقوق محفوظة لدى <span class="span">بلدية غزة</span> &copy; 2021 </p>
+
+                    <div class="square">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14.376" height="11.579"
+                            viewBox="0 0 14.376 11.579">
+                            <path id="icons8_twitter"
+                                d="M18.269,8.369a5.98,5.98,0,0,1-1.7.464,2.946,2.946,0,0,0,1.3-1.62A5.924,5.924,0,0,1,16,7.922a2.942,2.942,0,0,0-5.023,2.668A8.4,8.4,0,0,1,4.9,7.533a2.914,2.914,0,0,0,.912,3.906,3,3,0,0,1-1.337-.365v.034a2.932,2.932,0,0,0,2.365,2.867,2.935,2.935,0,0,1-.775.1,3.135,3.135,0,0,1-.556-.054,2.955,2.955,0,0,0,2.754,2.031A5.959,5.959,0,0,1,4.6,17.309a5.842,5.842,0,0,1-.7-.042,8.429,8.429,0,0,0,4.522,1.312,8.3,8.3,0,0,0,8.392-8.319c0-.127,0-.253-.01-.377a5.8,5.8,0,0,0,1.472-1.514"
+                                transform="translate(-3.893 -7)" fill="#fff" />
+                        </svg>
+                    </div>
+                    <div class="square">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path id="Union_8" data-name="Union 8"
+                                d="M4.308,16A4.313,4.313,0,0,1,0,11.692V4.308A4.313,4.313,0,0,1,4.308,0h7.384A4.313,4.313,0,0,1,16,4.308v7.384A4.313,4.313,0,0,1,11.692,16ZM1.231,4.308v7.384a3.081,3.081,0,0,0,3.077,3.077h7.384a3.081,3.081,0,0,0,3.077-3.077V4.308a3.081,3.081,0,0,0-3.077-3.077H4.308A3.08,3.08,0,0,0,1.231,4.308ZM3.692,8A4.308,4.308,0,1,1,8,12.308,4.313,4.313,0,0,1,3.692,8ZM4.923,8A3.077,3.077,0,1,0,8,4.923,3.08,3.08,0,0,0,4.923,8Zm6.769-4.615a.923.923,0,1,1,.923.923A.923.923,0,0,1,11.692,3.385Z"
+                                fill="#fff" />
+                        </svg>
+
+                    </div>
+                    <div class="square"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                            viewBox="0 0 14 14">
+                            <g id="icons8_facebook_logo_1" transform="translate(-0.188 0.071)">
+                                <path id="Subtraction_5" data-name="Subtraction 5"
+                                    d="M6.966,14A7,7,0,0,1,2.05,2.05a7,7,0,0,1,9.91,9.889A6.965,6.965,0,0,1,7.187,14c.23-.008.479-.031.761-.069V8.855H9.759l.284-1.84h-2.1V6.009A2.064,2.064,0,0,1,8.162,5a.814.814,0,0,1,.751-.435h1.149V2.961h-.009a9.772,9.772,0,0,0-1.427-.086c-1.773,0-2.672.981-2.672,2.917V7.015H4.221v1.84H5.953v5.058A7.084,7.084,0,0,0,6.966,14Z"
+                                    transform="translate(0.188 -0.071)" fill="#fff" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--NavBar  end-->
+
+        <!--links  start-->
+        <div class="fot">
+            <nav class="fotnav">
+                <div>
+                    <div class="fotdiv">
+                        <a href="#" class="fotlink">
+
+                            البلدية
+
+                        </a>
+                        <a href="#" class="fotlink ">
+
+                            المدينة
+
+                        </a>
+                        <a href="#" class="fotlink">
+
+                            الخدمات
+
+                        </a>
+                        <a href="#" class="fotlink">
+                            المشاريع
+                        </a>
+                        <a href="#" class="fotlink">
+                            المركز الإعلامي
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--links  end-->
+    </div>
+    <div class="container-fluid  height-100 bg">
+        <div class="row justify-content-start">
+            <div class="col-5">
+                <div>
+                    <h3>جاهزون لنسمع مقترحاتك</h3>
+                    <p>أهلا بك .. يمكنك التواصل معنا مباشرة على أرقامنا التالية</p>
+                </div>
+                <div class="div">
+                    <h4>تواصل معنا</h4>
+                    <div class="row">
+                        <div class="col">
+                            <p> البريد الإلكتروني :<spa>info@gaza-city.org</spa>
+
+                        </div>
+                        <div class="col">
+                            <p>رقم الشكاوي :<span>021542354</span></p>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p> رقم الهاتف :<span>2844055</span></p>
+                        </div>
+                        <div class="col">
+                            <P>:رقم الفاكس<span>2824400</span></P>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>:الرمز البريدي <span>16</span></p>
+                        </div>
+                        <div class="col">
+                            <p>:عنوان البريد <span>16</span></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mt-3">
+                    <h5>الشبكات الاجتماعية</h5>
+                    <div class="circle">
+                        <span>
+                            <svg id="Group_54563" data-name="Group 54563" xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="18" viewBox="0 0 18 18">
+                                <path id="Path_6916" data-name="Path 6916"
+                                    d="M9,0H9A8.994,8.994,0,0,0,1.713,14.275L.592,17.619l3.459-1.106A9,9,0,1,0,9,0Z"
+                                    transform="translate(0)" fill="#392c23" />
+                                <path id="Path_6917" data-name="Path 6917"
+                                    d="M117.768,125.716A2.548,2.548,0,0,1,116,126.991c-.472.1-1.088.181-3.163-.68a11.316,11.316,0,0,1-4.5-3.974,5.163,5.163,0,0,1-1.072-2.726,2.886,2.886,0,0,1,.923-2.2,1.312,1.312,0,0,1,.923-.324c.112,0,.212.006.3.01.265.011.4.027.573.446.218.525.748,1.822.812,1.955a.538.538,0,0,1,.038.489,1.562,1.562,0,0,1-.292.415c-.133.154-.26.271-.393.436-.122.143-.26.3-.106.563a8.019,8.019,0,0,0,1.465,1.822,6.638,6.638,0,0,0,2.118,1.307.571.571,0,0,0,.637-.1,10.932,10.932,0,0,0,.706-.935.5.5,0,0,1,.648-.2c.244.085,1.534.723,1.8.855s.44.2.5.308A2.252,2.252,0,0,1,117.768,125.716Z"
+                                    transform="translate(-103.512 -112.992)" fill="#fff" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="circle">
+                        <span>
+                            <svg id="svgexport-6_6_" data-name="svgexport-6 (6)" xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="15.672" viewBox="0 0 18 15.672">
+                                <g id="XMLID_496_">
+                                    <path id="XMLID_497_"
+                                        d="M.318,26.915l4.148,1.548,1.605,5.163a.488.488,0,0,0,.775.233l2.312-1.885A.69.69,0,0,1,10,31.951l4.17,3.027a.489.489,0,0,0,.766-.3L17.99,19.99a.489.489,0,0,0-.655-.556L.313,26A.489.489,0,0,0,.318,26.915Zm5.494.724,8.106-4.992a.141.141,0,0,1,.17.224L7.4,29.089a1.387,1.387,0,0,0-.43.83l-.228,1.689a.209.209,0,0,1-.409.03l-.876-3.08A.816.816,0,0,1,5.812,27.639Z"
+                                        transform="translate(0 -19.401)" fill="#392c23" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="circle">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17.892" viewBox="0 0 18 17.892">
+                                <g id="Group_54706" data-name="Group 54706" transform="translate(-690.5 -5385.5)">
+                                    <path id="Path_203" data-name="Path 203"
+                                        d="M699.5,5385.5a9,9,0,0,0-1.406,17.892V5397.1h-2.285v-2.6h2.285v-1.979a3.178,3.178,0,0,1,3.4-3.5,13.543,13.543,0,0,1,2.015.18v2.208h-1.134a1.3,1.3,0,0,0-1.468,1.4v1.691h2.5l-.4,2.6h-2.1v6.288A9,9,0,0,0,699.5,5385.5Z"
+                                        fill="#231f20" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="circle">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <g id="Group_54683" data-name="Group 54683" transform="translate(-734.5 -5385.5)">
+                                    <path id="Path_204" data-name="Path 204"
+                                        d="M743.5,5391.8a2.7,2.7,0,1,0,1.909.792A2.709,2.709,0,0,0,743.5,5391.8Zm0-1.8a4.5,4.5,0,1,1-3.182,1.32A4.518,4.518,0,0,1,743.5,5390Zm5.85-.228a1.125,1.125,0,1,1-2.25,0,1.125,1.125,0,0,1,.33-.792,1.109,1.109,0,0,1,1.59,0A1.125,1.125,0,0,1,749.35,5389.772Zm-5.85-2.473c-2.227,0-2.59.012-3.626.049a5,5,0,0,0-1.618.3,2.658,2.658,0,0,0-.972.635,2.6,2.6,0,0,0-.634.972,4.878,4.878,0,0,0-.3,1.62c-.047,1-.053,1.344-.053,3.624,0,2.232.006,2.592.053,3.625a4.909,4.909,0,0,0,.3,1.62,2.593,2.593,0,0,0,.631.972,2.733,2.733,0,0,0,.972.635,5.08,5.08,0,0,0,1.62.3c.994.049,1.342.049,3.626.049,2.227,0,2.59-.012,3.626-.049a5.03,5.03,0,0,0,1.618-.3,2.67,2.67,0,0,0,.972-.635,2.627,2.627,0,0,0,.634-.972,4.909,4.909,0,0,0,.3-1.62c.047-1,.053-1.344.053-3.625,0-2.231-.006-2.591-.053-3.624a4.909,4.909,0,0,0-.3-1.62,2.624,2.624,0,0,0-.634-.972,2.477,2.477,0,0,0-.972-.635,5.018,5.018,0,0,0-1.618-.3C746.133,5387.3,745.785,5387.3,743.5,5387.3Zm0-1.8c2.446,0,2.75.012,3.709.048a6.894,6.894,0,0,1,2.185.42,4.612,4.612,0,0,1,2.633,2.64,6.609,6.609,0,0,1,.419,2.185c.042.959.054,1.26.054,3.707s-.008,2.749-.054,3.708a6.6,6.6,0,0,1-.419,2.184,4.354,4.354,0,0,1-1.037,1.6,4.494,4.494,0,0,1-1.6,1.044,6.6,6.6,0,0,1-2.185.408c-.959.049-1.264.06-3.709.06s-2.75-.011-3.71-.06a6.619,6.619,0,0,1-2.185-.408,4.49,4.49,0,0,1-1.595-1.044,4.37,4.37,0,0,1-1.037-1.6,6.6,6.6,0,0,1-.419-2.184c-.042-.959-.054-1.26-.054-3.708s.008-2.748.054-3.707a6.611,6.611,0,0,1,.419-2.185,4.371,4.371,0,0,1,1.037-1.6,4.506,4.506,0,0,1,1.595-1.043,6.9,6.9,0,0,1,2.185-.42C740.75,5385.512,741.054,5385.5,743.5,5385.5Z"
+                                        fill="#392c23" />
+                                </g>
+                            </svg>
+
+                        </span>
+                    </div>
+                    <div class="circle">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15.814" height="18" viewBox="0 0 15.814 18">
+                                <g id="svgexport-6_7_" data-name="svgexport-6 (7)" transform="translate(-31.423 -0.39)">
+                                    <g id="Group_54684" data-name="Group 54684" transform="translate(31.423 0.39)">
+                                        <path id="Path_25754" data-name="Path 25754"
+                                            d="M47.229,4.9a4.535,4.535,0,0,1-2.74-.916A4.536,4.536,0,0,1,42.677.39H39.738V8.421l0,4.4A2.664,2.664,0,1,1,37.907,10.3V7.311a5.783,5.783,0,0,0-.848-.063,5.636,5.636,0,0,0-4.235,1.894,5.523,5.523,0,0,0,.249,7.616,5.734,5.734,0,0,0,.531.464,5.636,5.636,0,0,0,3.455,1.168,5.783,5.783,0,0,0,.848-.062,5.617,5.617,0,0,0,3.138-1.569A5.5,5.5,0,0,0,42.7,12.843L42.68,6.274a7.447,7.447,0,0,0,4.557,1.549V4.9h-.008Z"
+                                            transform="translate(-31.423 -0.39)" fill="#392c23" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </span>
+                    </div>
+                    <div class="circle">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16.884" viewBox="0 0 18 16.884">
+                                <g id="svgexport-6_8_" data-name="svgexport-6 (8)" transform="translate(0 -15.988)">
+                                    <g id="Group_54686" data-name="Group 54686" transform="translate(0 15.988)">
+                                        <g id="Group_54685" data-name="Group 54685" transform="translate(0 0)">
+                                            <path id="Path_25755" data-name="Path 25755"
+                                                d="M17.647,28.6a5.2,5.2,0,0,1-3.535-2.967.17.17,0,0,0-.01-.02A.745.745,0,0,1,14.018,25c.132-.308.636-.468.969-.574.1-.03.188-.06.263-.089a2.037,2.037,0,0,0,.718-.429.682.682,0,0,0,.218-.491.772.772,0,0,0-.578-.67,1.045,1.045,0,0,0-.392-.074.871.871,0,0,0-.365.074,2.045,2.045,0,0,1-.75.214.689.689,0,0,1-.249-.054c.007-.113.014-.228.021-.348l0-.052a8.919,8.919,0,0,0-.23-3.636,4.891,4.891,0,0,0-1.1-1.577,4.606,4.606,0,0,0-1.317-.869,5.2,5.2,0,0,0-2.055-.434H9.128l-.309,0a5.223,5.223,0,0,0-2.058.434,4.58,4.58,0,0,0-1.313.868,4.907,4.907,0,0,0-1.1,1.574A8.927,8.927,0,0,0,4.121,22.5v0c.008.131.017.267.025.4a.721.721,0,0,1-.295.055,1.951,1.951,0,0,1-.8-.215.72.72,0,0,0-.3-.063,1.077,1.077,0,0,0-.539.151.746.746,0,0,0-.381.487.673.673,0,0,0,.257.631,2.212,2.212,0,0,0,.671.384c.077.03.168.059.263.089.333.106.838.266.97.574a.75.75,0,0,1-.086.612.16.16,0,0,0-.009.02,5.961,5.961,0,0,1-.907,1.4A5.089,5.089,0,0,1,1.889,28a4.023,4.023,0,0,1-1.536.6A.42.42,0,0,0,0,29.034a.533.533,0,0,0,.044.183h0a1.125,1.125,0,0,0,.61.521,6.961,6.961,0,0,0,1.761.458,2.138,2.138,0,0,1,.108.387c.029.135.06.275.1.422a.461.461,0,0,0,.483.351,2.349,2.349,0,0,0,.414-.057,4.706,4.706,0,0,1,.944-.107,4.1,4.1,0,0,1,.675.057A3.206,3.206,0,0,1,6.4,31.9a4.082,4.082,0,0,0,2.486.969q.046,0,.091,0c.036,0,.082,0,.129,0A4.088,4.088,0,0,0,11.6,31.9h0a3.217,3.217,0,0,1,1.261-.651,4.1,4.1,0,0,1,.675-.057,4.728,4.728,0,0,1,.944.1,2.28,2.28,0,0,0,.414.051h.02A.456.456,0,0,0,15.375,31c.043-.145.073-.28.1-.419a2.212,2.212,0,0,1,.107-.385,7.009,7.009,0,0,0,1.761-.458,1.129,1.129,0,0,0,.609-.52A.535.535,0,0,0,18,29.033.419.419,0,0,0,17.647,28.6Z"
+                                                transform="translate(0 -15.988)" fill="#392c23" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.6337824697816!2d34.46209698489256!3d31.50674855496714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14fd7f0245368e87%3A0xdeab57e2e9de6ea4!2z2KjZhNiv2YrYqSDYutiy2Kk!5e0!3m2!1sar!2s!4v1668615606953!5m2!1sar!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="col-5">
+                <div>
+                    <h3>مقترحات</h3>
+                    <p>.أهلا بك .. نحن على استعداد لخدمتك واستقبال كافة اقتراحاتك واستفساراتك</p>
+                </div>
+                <form>
+                    <div class="row justify-content-center mt-4">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label for="preachingtype" class="form-label">
+                                نوع المقترح
+                            </label>
+                            <select class="form-select" id="preachingtype">
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <option selected> اختر نوع المقترح</option>
+                                <option value="1">one</option>
+                                <option value="2">tow</option>
+                                <option value="3">tree</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-label">الاسم كاملا</label>
+                            <input type="text" id="fname" class="form-control" placeholder="أدخل اسمك رباعيا">
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label for="phone" class="form-label">رقم الجوال</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="أدخل رقم جوالك ">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label for="email" class="form-label">البريد الالكتروني</label>
+                            <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الالكتروني">
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label for="address" class="form-label">عنوان السكن</label>
+                            <input type="text" class="form-control" id="address" placeholder="أدخل عنوان سكنك">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label for="number" class="form-label">رقم اشتراك البلدية <span>(اختياري)</span></label>
+                            <input type="text" class="form-control" id="number" placeholder="أدخل رقم اشتراك البلدية">
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="form-group  flex-column d-flex">
+                            <label for="address" class="form-label">ارفاق ملف</label>
+                            <input type="file" class="form-control" id="address" placeholder="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="form-group flex-column d-flex">
+                            <label for="data" class="form-label">بيانات المقترح</label>
+                            <textarea id="data" class="form-control">...اكتب نص مقترحك هنا</textarea>
+                        </div>
+                    </div>
+                    <div class="send">
+                        <input type="submit" class="form-control" value=" ">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
