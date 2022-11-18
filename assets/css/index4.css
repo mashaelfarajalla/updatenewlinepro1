@@ -1,0 +1,92 @@
+.bg {
+    background: url(./../image/Group.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.height-100 {
+    height: calc(76vh);
+}
+
+div.container-fluid {
+    margin-top: 19vh;
+    width: 92%;
+    margin-left: 0px;
+}
+
+/* .container-fluid .justify-content-start {
+    padding: 25px;
+} */
+
+.container-fluid h3 {
+    font-size: 20px;
+    font-family: 'FFShamelFamily-SansOneBold';
+    color: #CF2A45;
+}
+
+.container-fluid p {
+    font-size: 16px;
+    color: #392C23;
+
+}
+
+.circle {
+    height: 56px;
+    width: 56px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-block;
+    border: 1px solid #392C23;
+    margin: 0 4px;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid #392C23;
+    background-color: transparent;
+}
+
+.fa-magnifying-glass:before,
+.fa-search:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.tabcontent {
+    display: none;
+    background-color: #fff;
+}
+
+.tabcontent .active {
+    display: block;
+    display: show;
+}
+
+.tabcontent p {
+    font-size: 16px;
+    font-family: 'FFShamelFamily-SansOneBold';
+    /* background-color: white; */
+    padding: 25px;
+    color: #392C23;
+}
+
+.background {
+    background-color: #3EC4B5;
+}
+
+.background p {
+    color: white;
+}
+
+a.pagenumber:hover,
+.multiTabs a.active {
+    background-color: #3EC4B5;
+    color: white;
+}

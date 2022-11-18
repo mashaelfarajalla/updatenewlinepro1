@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/index.css" />
+    <!-- <link rel="stylesheet" href="assets/css/loadingpage.css" /> -->
+
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/hover-min.css">
     <link rel="stylesheet" href="assets/css/hover.css">
@@ -61,6 +63,9 @@
 </head>
 
 <body>
+
+
+
     <div id="body-pd">
 
         <!--Header  start-->
@@ -417,9 +422,9 @@
                                     </span>
 
                                     <span>
-                                        <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                        <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد
+                                            <i class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -440,9 +445,9 @@
                                     </span>
 
                                     <span>
-                                        <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                        <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد<i
+                                                class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -467,8 +472,8 @@
 
                                     <span>
                                         <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                                class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -490,8 +495,8 @@
 
                                     <span>
                                         <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                                class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -516,8 +521,8 @@
 
                                     <span>
                                         <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                                class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -539,8 +544,8 @@
 
                                     <span>
                                         <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                                class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -564,8 +569,8 @@
 
                                     <span>
                                         <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                                class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -587,8 +592,8 @@
 
                                     <span>
                                         <a href="#" class="hvr-icon-wobble-horizontal">قراءة المزيد <i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i><i
-                                                class="fa-solid fa-chevron-left hvr-icon"></i></a>
+                                                class="fa-solid fa-angles-left hvr-icon"></i>
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -699,6 +704,16 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+
+    <script>
+        // setTimeout(function () {
+        //     $('center').fadeToggle();
+        // }, 1500)
+        var preloader = document.getElementsByClassName('center');
+        function myFunction() {
+            preloader.style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
